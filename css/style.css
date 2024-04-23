@@ -1,0 +1,61 @@
+:root {
+    /* JS : var 이름 = 내용; */
+    /* CSS : --이름 : 내용; */
+    --line: #393D46;
+    --line2: #6A6A6A;
+    --line3: #9499A4;
+    --line4: #ACB0B6;
+    --lina5: #E1E1E1;
+    --black: #000;
+    --bgButton: #60696F;
+    --white: #FFF;
+}
+body {
+    padding: 30px;
+}
+.table-type10 {
+    border-top: 2px solid var(--line);
+    border-bottom: 1px solid var(--line3);
+    thead {
+        border-bottom: 1px solid var(--line4);
+    th {
+            padding: 17px 0;
+            color: var(--black)
+            font-size: 16px;
+            font-weight: 700;
+    }
+}
+    tbody {
+        tr {
+            border-bottom: 1px solid var(--lina5);
+            &:last-child {
+               border-bottom: none;
+            }
+        }
+    }
+    td {
+        color: var(--line2);
+        font-size: 16px;
+        padding: 19px 0;
+        + td {
+            /* td + td */
+            border-left: 1px solid var(--lina5);
+        }
+    }
+    [rowspan] {
+        /* .table-type10 [rowspan] */
+        border-right: 1px solid var(--lina5);
+    }
+}
+
+.btn-gray {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    height: 28px;
+    border-radius: 14px;
+    background: var(--bgButton);
+    color: var(--white);
+    font-size: 16px;
+}
